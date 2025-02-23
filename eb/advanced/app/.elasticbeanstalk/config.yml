@@ -1,12 +1,11 @@
 branch-defaults:
   default:
-    environment: prod
-    group_suffix: null
+    environment: study-sync-docker
 global:
   application_name: study-sync
   branch: null
-  default_ec2_keyname: aws-eb
-  default_platform: Node.js 22 running on 64bit Amazon Linux 2023
+  default_ec2_keyname: null
+  default_platform: Docker running on 64bit Amazon Linux 2023
   default_region: ap-south-1
   include_git_submodules: true
   instance_profile: null
