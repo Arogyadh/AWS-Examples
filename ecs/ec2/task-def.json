@@ -1,7 +1,7 @@
 {
   "family": "app",
-  "executionRoleArn": "arn:aws:iam::982383527471:role/EscEc2BasicServiceExecutionRole",
-  "taskRoleArn": "arn:aws:iam::982383527471:role/EcsEc2BasicTaskRole",
+  "executionRoleArn": "arn:aws:iam::000400338512:role/EscEc2BasicServiceExecutionRole",
+  "taskRoleArn": "arn:aws:iam::000400338512:role/EcsEc2BasicTaskRole",
   "networkMode": "bridge",
   "cpu": "256",
   "memory": "512",
@@ -11,7 +11,7 @@
   "containerDefinitions": [
     {
       "name": "app",
-      "image": "982383527471.dkr.ecr.ca-central-1.amazonaws.com/app",
+      "image": "000400338512.dkr.ecr.ap-south-1.amazonaws.com/app",
       "essential": true,
       "portMappings": [
         {
@@ -26,7 +26,7 @@
         "logDriver": "awslogs",
         "options": {
             "awslogs-group": "ecs-ec2-basic",
-            "awslogs-region": "ca-central-1",
+            "awslogs-region": "ap-south-1",
             "awslogs-stream-prefix": "app"
         }
       }

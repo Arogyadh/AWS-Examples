@@ -1,33 +1,30 @@
 {
   "family": "app",
-  "executionRoleArn": "arn:aws:iam::982383527471:role/EscEc2BasicServiceExecutionRole",
-  "taskRoleArn": "arn:aws:iam::982383527471:role/EcsEc2BasicTaskRole",
+  "executionRoleArn": "arn:aws:iam::000400338512:role/EscEc2BasicServiceExecutionRole",
+  "taskRoleArn": "arn:aws:iam::000400338512:role/EcsEc2BasicTaskRole",
   "networkMode": "awsvpc",
   "cpu": "256",
   "memory": "512",
-  "requiresCompatibilities": [ 
-    "FARGATE" 
-  ],
-
+  "requiresCompatibilities": ["FARGATE"],
   "containerDefinitions": [
     {
       "name": "app",
-      "image": "982383527471.dkr.ecr.ca-central-1.amazonaws.com/app",
+      "image": "000400338512.dkr.ecr.ap-south-1.amazonaws.com/app",
       "essential": true,
       "portMappings": [
         {
           "name": "app",
           "containerPort": 4567,
-          "protocol": "tcp", 
+          "protocol": "tcp",
           "appProtocol": "http"
         }
       ],
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
-            "awslogs-group": "ecs-ec2-fargate",
-            "awslogs-region": "ca-central-1",
-            "awslogs-stream-prefix": "app"
+          "awslogs-group": "ecs-ec2-fargate",
+          "awslogs-region": "ap-south-1",
+          "awslogs-stream-prefix": "app"
         }
       }
     }

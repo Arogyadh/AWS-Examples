@@ -9,13 +9,13 @@ Parameters:
     Default: 4567
   VpcId:
     Type: String
-    Default: vpc-08f0ec02f7471b018
+    Default: vpc-095119748509b8bc4
   Subnets:
-    Type: 'List<AWS::EC2::Subnet::Id>'
-    Description: A list of subnets for the Auto Scaling group    
+    Type: "List<AWS::EC2::Subnet::Id>"
+    Description: A list of subnets for the Auto Scaling group
     # ca-central-1a
     # ca-central-1b
-    Default: "subnet-0d8058cb02f147a86,subnet-0e0fd31733061237d"
+    Default: "subnet-0da93f9a23b20099d,subnet-05cefc1c4ca189b84"
 Resources:
   ECSCluster:
     # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html
